@@ -1,7 +1,7 @@
 let index = 0;
 let intervaloCarrossel;
 let contatdor = 1;
-const intervaloTempoCarrossel = 3500;
+const intervaloTempoCarrossel = 10000;
 let carrosselAtivo = true; // Variável para verificar se o carrossel está ativo
 
 // Função para trocar a imagem
@@ -88,9 +88,6 @@ function girarCarrosselTelaCheia() {
     if (document.fullscreenElement) {
         // Iniciar a rotação automaticamente quando estiver em tela cheia
         iniciarCarrosselAutomatico();
-    } else {
-        // Parar a rotação automaticamente quando não estiver em tela cheia
-        pararCarrosselAutomatico();
     }
 }
 

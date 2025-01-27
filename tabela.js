@@ -148,7 +148,7 @@ function verificarMouse(evento){
     const tds = tr.getElementsByTagName('td');
    
     for (let i = 0; i < tds.length; i++) {
-        tds[i].style.backgroundColor = 'rgba(0, 153, 13, 0.61)';
+        tds[i].style.backgroundColor = 'rgba(0, 153, 13, 0.95)';
     }
  
 }

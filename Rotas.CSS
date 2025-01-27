@@ -8,17 +8,18 @@
 /* Estilo da logo */
 .logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 40px;
   z-index: 1000;
-  width: 200px;
+  width: 70px;
   transition: width 0.3s ease, transform 0.3s ease;
-  border-color: rgb(168, 155, 145);
+  border-color: rgb(76,161,93);
   border-style: groove;
+  border-radius: 50%;
 }
 
 .logo:hover {
-  background-color: rgb(168, 155, 145);
+  background-color: rgb(168,155,145);
   transform: scale(1.05);
 }
 
@@ -36,6 +37,28 @@
 
   .sidebar {
     width: 200px;
+  }
+}
+
+.logo1 {
+  position: absolute;
+  top: 50px; /* Ajuste a distância do topo */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 1000;
+  width: 200px;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+  .logo1 {
+    width: 120px;
+  }
+
+  @media (max-width: 480px) {
+    .logo1 {
+      width: 100px;
+    }
   }
 }
 
@@ -70,7 +93,7 @@
   background-color: rgb(10, 47, 42);
   color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease;
+  transition: right 0.50s ease;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -108,19 +131,14 @@
   cursor: pointer;
   margin: 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.toggle-items-btn:hover {
-  background-color: rgb(168, 155, 145);
-  transform: scale(1.05);
 }
 
 .itemlist {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
+  display: none;
 }
 
 .itemlist.show {
@@ -146,6 +164,10 @@
   right: 0;
 }
 
+.content.open {
+  margin-right: 250px;
+}
+
 .content {
   padding: 20px;
   margin-right: 0;
@@ -153,13 +175,13 @@
   background-color: #152e2a;
 }
 
+.navbar-header{
+  border: 5px, solid rgb(0, 0, 0);
+}
+
 .navbar {
   background-color: rgb(10, 47, 42);
   height: 100px;
-}
-
-.navbar-header{
-  border: 5px, solid rgb(0, 0, 0);
 }
 
 ul {
@@ -188,7 +210,6 @@ table {
   width: 30%;
   border-collapse: collapse;
   margin: 20px 0;
-  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 100vw;
@@ -232,32 +253,22 @@ tfoot {
   padding: 10px;
 }
 
-/* Estilo responsivo */
-@media (max-width: 768px) {
-  .logo {
-    width: 120px;
-  }
 
-  table {
-    font-size: 12px;
-  }
-
-  th, td {
-    padding: 8px;
-  }
+.table {
+  font-size: 12px;
 }
 
-@media (max-width: 480px) {
-  .logo {
-    width: 100px;
-  }
+th, td {
+  padding: 8px;
+}
 
-  table {
+
+.table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-  }
 }
+
 
 /* Estilo do rodapé */
 .footer {
